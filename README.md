@@ -34,12 +34,10 @@ Include country picker
 ```gradle
 dependencies {
 	// ...
-    compile 'com.github.SocialbitGmbH:AndroidCountryPicker:1.0.3@aar'
+    compile 'com.github.Damacustas:AndroidCountryPicker:1.0.5'
 	// ...
 }
 ```
-
-Note the library requires 'com.android.support:support-v4'
 
 
 ## How to use
@@ -47,7 +45,7 @@ Note the library requires 'com.android.support:support-v4'
 To use CountryPicker in your code as a fragment:
 
 ```java
-FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+FragmentTransaction transaction = getFragmentManager().beginTransaction();
 CountryPicker picker = new CountryPicker();
 transaction.replace(R.id.home, picker);
 transaction.commit();
@@ -57,7 +55,7 @@ To show CountryPicker as a dialog:
 
 ```java
 CountryPicker picker = CountryPicker.newInstance("Select Country");
-picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
+picker.show(getFragmentManager(), "COUNTRY_PICKER");
 ```
 
 When user selects a country, client can listen to that event:
